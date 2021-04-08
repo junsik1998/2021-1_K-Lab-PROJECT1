@@ -1,15 +1,26 @@
 import React, { useState } from "react";
 import { Button, StyleSheet, Text, View } from 'react-native';
 
-export default function Init() {
+export default function Init({navigation}) {
+    const onPressSignUp=()=>{
+      
+        navigation.navigate("SignUp")
+  
+    }
+    const onPressSignIn=()=>{
+      navigation.navigate("SignIn")
+    }
     return (
       <View style={styles.container}>
-          <View style = {{flex : 2}}></View>
           <View style ={styles.button}>
-            <Button title = "Sign up" ></Button>
+            <Button title = "Sign up" 
+              onPress = {onPressSignUp}
+            ></Button>
           </View>
           <View style = {styles.button}>
-            <Button title = "Sign in" ></Button>
+            <Button title = "Sign in"
+            onPress = {onPressSignIn}
+             ></Button>
           </View>
           
       </View>
@@ -20,13 +31,13 @@ export default function Init() {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      //backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
     },
     button :{
     flex: 1,
-      backgroundColor: '#fff',
+      //backgroundColor: '#fff',
       //alignItems: 'center',
       justifyContent: 'center',
     }

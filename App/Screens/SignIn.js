@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
-export default function SignUp() {
+export default function SignIn() {
     return (
     <View style = {{flex:1, flexDirection : "row"}}>
         <View style = {{flex : 1}}></View>
