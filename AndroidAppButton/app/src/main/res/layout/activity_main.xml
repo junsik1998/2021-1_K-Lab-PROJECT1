@@ -23,19 +23,20 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/InfoBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 android:layout_weight="1"
                 app:srcCompat="@android:drawable/btn_star" />
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/InfoText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:ems="8"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="Info" />
         </LinearLayout>
 
         <LinearLayout
@@ -46,17 +47,18 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/CommunityBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 app:srcCompat="@android:drawable/btn_star" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/CommunityText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ems="8"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="Community" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,17 +68,18 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/MyBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 app:srcCompat="@android:drawable/btn_star" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/MyText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ems="8"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="My" />
         </LinearLayout>
 
         <LinearLayout
@@ -86,17 +89,18 @@
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/PlantsAnimalBtn"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
                 app:srcCompat="@android:drawable/btn_star" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/PlantsAnimalText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:ems="8"
                 android:gravity="center"
-                android:text="TextView" />
+                android:text="Plants Animal" />
         </LinearLayout>
 
     </LinearLayout>
