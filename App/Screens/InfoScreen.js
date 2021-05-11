@@ -1,57 +1,75 @@
 import * as React from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
-
+import { Text, View, StyleSheet, Image, Button } from "react-native";
+import Icon from 'react-native-vector-icons/Ionicons';
 export default function InfoScreen() {
   return (
     <View style={styles.container}>
+      
       <View
-        title="Garden title"
-        style={{
-          flex: 2,
-          alignItems: "center",
-          justifyContent: "center",
+         style={{
+          flex: 0.5,
+          //alignItems: "center",
+          //justifyContent: "center",
           margin: 5,
           padding: 15,
-          borderColor: "grey",
-          borderWidth: 1,
-          borderRadius: 5,
+          
         }}
       >
-        <Text>Garden Title</Text>
       </View>
+      <View style = {{flex:1, flexDirection : 'row'}}>
+        
+          <View style = {{flex:1}}/>
+          <View style = {{flex:1,alignItems : "center"}}><Text style = {{ fontSize : 25 }}>Info</Text></View>
+          <View style = {{flex:0.8,alignItems : "flex-end"}}><Icon style = {{fontSize : 25}} name="menu"></Icon></View>
+          <View style = {{flex : 0.2}}/>
+      </View>
+
       <View
-        title="Garden Position"
+        title="Garden title"
         style={{
           flex: 1,
           alignItems: "center",
           justifyContent: "center",
-          margin: 5,
-          padding: 15,
-          borderColor: "grey",
-          borderWidth: 1,
-          borderRadius: 5,
+       
         }}
       >
-        <Text>Garden Position</Text>
+        <Text style = {{fontSize : 30}}>Wijkpark Hesselingen</Text>
       </View>
-      {/* <View
-        title="Garden Image"
-        style={{
-          flex: 5,
-          alignItems: "center",
-          justifyContent: "center",
-          margin: 5,
-          padding: 15,
-          borderColor: "grey",
-          borderWidth: 1,
-          borderRadius: 5,
-        }}
-      > */}
-      <Image
-        style={{ flex: 5, resizeMode: "contain" }}
-        source={require("../assets/garden.jpeg")}
+      <View
+        style = {{flex:2, alignItems : "center",
+        justifyContent: "center",
+        
+      }}
+      >
+
+      </View>
+      <View
+        style = {{flex: 2,  alignItems: "center",
+        justifyContent: "center",}}
+      >
+        <Text>Position</Text>
+        <Image
+        style={{ resizeMode: "contain" }}
+        source={require("../assets/position.jpeg")}
       />
-      {/* </View> */}
+      </View>
+      
+        <View
+        style={{flex:2}}
+        >
+
+        </View>
+      <View
+      style = {{flex: 4,  alignItems: "center",
+      justifyContent: "center",}}
+      >
+        <Text>Picture</Text>
+        <Image
+          style={{width : 300, height: 300}}
+          source={require("../assets/garden.jpeg")}
+        />
+      </View>
+  
     </View>
   );
 }
