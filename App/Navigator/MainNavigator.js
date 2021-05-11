@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import CommunityScreen from "../Screens/CommunityScreen";
 import InfoScreen from "../Screens/InfoScreen";
 import SNSScreen from "../Screens/SNSScreen";
+import MyScreen from "../Screens/MyTable";
 import ActivityTable from "../Screens/CommunityTable";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -35,7 +36,7 @@ export default function Navigator() {
     >
       <Tab.Screen name="Info" component={InfoScreen} />
       <Tab.Screen name="Community" component={CommunityScreen} />
-      <Tab.Screen name="My" component={CommunityScreen} />
+      <Tab.Screen name="My" component={MyScreen} />
       <Tab.Screen name="SNS" component={SNSScreen} />
     </Tab.Navigator>
   );
