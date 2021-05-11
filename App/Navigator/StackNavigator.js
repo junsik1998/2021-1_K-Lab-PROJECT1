@@ -3,8 +3,8 @@ import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import ActivityTable from "../Screens/ActivityTable";
-import ActivityArticle from "../Screens/ActivityArticle";
+import ActivityTable from "../Screens/CommunityTable";
+import ActivityArticle from "../Screens/CommunityArticle";
 
 const Stack = createStackNavigator();
 
