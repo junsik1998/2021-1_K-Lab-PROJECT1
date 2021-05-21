@@ -56,9 +56,9 @@ class InfoFragment : Fragment(), OnMapReadyCallback {
     }
 
     override fun onMapReady(googleMap: GoogleMap?) {
-        val myLocation = LatLng(37.654601, 127.060530)
+        val myLocation = LatLng(37.568449, 126.985382)
         googleMap?.moveCamera(CameraUpdateFactory.newLatLng(myLocation))
-        googleMap?.moveCamera(CameraUpdateFactory.zoomTo(15f))
+        googleMap?.moveCamera(CameraUpdateFactory.zoomTo(10f))
 
         val marker = MarkerOptions()
                     .position(myLocation)
