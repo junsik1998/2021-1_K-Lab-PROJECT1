@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //setFragment(InfoFragment())
         init()
 
     }
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity(){
             bottomNavigationView.setOnNavigationItemSelectedListener {
                 when (it.itemId) {
                     R.id.InfoMenuBtn -> {
+                        setFragment(InfoFragment())
                         //Toast.makeText(this@MainActivity, "info", Toast.LENGTH_SHORT).show()
                         true
                     }
@@ -49,6 +51,7 @@ class MainActivity : AppCompatActivity(){
                         true
                     }
                     R.id.SNSMenuBtn -> {
+                        setFragment(SnsFragment())
                         //Toast.makeText(this@MainActivity, "SNS", Toast.LENGTH_SHORT).show()
                         true
                     }
