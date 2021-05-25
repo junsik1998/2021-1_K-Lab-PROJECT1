@@ -4,18 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RowAddActivity">
+    tools:context=".RowAddActivity"
+    android:background="@color/subcolor2">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addRow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="78dp"
         android:text="등록"
         app:layout_constraintBaseline_toBaselineOf="@+id/addCancel"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/rounded_rectangle"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +25,8 @@
         android:layout_marginBottom="133dp"
         android:text="취소"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/rounded_rectangle"/>
 
     <TextView
         android:id="@+id/addTitle"

@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         setFragment(InfoFragment())
         init()
 
@@ -31,7 +32,6 @@ class MainActivity : AppCompatActivity(){
     }
 
     private fun init() {
-
         binding.apply {
             bottomNavigationView.setOnNavigationItemSelectedListener {
                 when (it.itemId) {

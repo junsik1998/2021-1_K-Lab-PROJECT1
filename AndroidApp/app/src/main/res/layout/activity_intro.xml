@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/maincolor"
     tools:context=".IntroActivity">
 
     <TextView
@@ -81,11 +82,14 @@
 
     </RadioGroup>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/introMoveBtn"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/rounded_rectangle"
         android:text="Main으로 이동"
         android:textSize="30sp" />
 </LinearLayout>
