@@ -17,6 +17,14 @@ class MainActivity : AppCompatActivity(){
         init()
 
     }
+
+    fun setDataAtFragment(fragment: Fragment, select:Int){
+        val bundle =Bundle()
+        bundle.putString("select", select.toString())
+        fragment.arguments = bundle
+        setFragment(fragment)
+    }
+
     fun setDataAtFragment(fragment: Fragment, type:String){
         //kinds : all, wrong ,favorites
         val bundle = Bundle()
@@ -36,7 +44,7 @@ class MainActivity : AppCompatActivity(){
             bottomNavigationView.setOnNavigationItemSelectedListener {
                 when (it.itemId) {
                     R.id.InfoMenuBtn -> {
-                        setFragment(InfoFragment())
+                        setDataAtFragment(InfoFragment(), 1)
                         //Toast.makeText(this@MainActivity, "info", Toast.LENGTH_SHORT).show()
                         true
                     }
@@ -60,8 +68,8 @@ class MainActivity : AppCompatActivity(){
                         false
                     }
                 }
-
             }
+            bottomNavigationView.selectedItemId = R.id.ActivityMenuBtn
         }
     }
 }
