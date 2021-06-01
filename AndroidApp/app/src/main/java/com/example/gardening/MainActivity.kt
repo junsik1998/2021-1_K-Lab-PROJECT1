@@ -1,6 +1,7 @@
 package com.example.gardening
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.gardening.databinding.ActivityMainBinding
@@ -8,6 +9,8 @@ import com.example.gardening.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity(){
 
     lateinit var binding: ActivityMainBinding
+    var select:Int ?= null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -15,7 +18,8 @@ class MainActivity : AppCompatActivity(){
 
         setFragment(InfoFragment())
         init()
-
+        select = intent.getStringExtra("select")?.toInt()
+        Log.i("RADIO", select.toString())
     }
 
     fun setDataAtFragment(fragment: Fragment, select:Int){
@@ -44,7 +48,7 @@ class MainActivity : AppCompatActivity(){
             bottomNavigationView.setOnNavigationItemSelectedListener {
                 when (it.itemId) {
                     R.id.InfoMenuBtn -> {
-                        setDataAtFragment(InfoFragment(), 1)
+                        setDataAtFragment(InfoFragment(), select!!)
                         //Toast.makeText(this@MainActivity, "info", Toast.LENGTH_SHORT).show()
                         true
                     }
