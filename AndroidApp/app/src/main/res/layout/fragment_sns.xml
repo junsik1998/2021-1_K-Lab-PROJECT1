@@ -17,6 +17,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/snsArticle1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
@@ -64,7 +65,7 @@
                             android:layout_height="match_parent"
                             android:gravity="bottom|right"
                             android:padding="5dp"
-                            android:text="Republic of Korea, Seoul"
+                            android:text="Banpo Hangang Park"
                             android:textColor="@color/black"
                             android:textSize="20sp" />
                     </LinearLayout>
@@ -78,10 +79,11 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/cat" />
+                    android:src="@drawable/sns_cat" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/snsArticle2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
@@ -129,7 +131,7 @@
                             android:layout_height="match_parent"
                             android:gravity="bottom|right"
                             android:padding="5dp"
-                            android:text="Hoge Veluwe National Park"
+                            android:text="Banpo Hangang Park"
                             android:textColor="@color/black"
                             android:textSize="20sp" />
                     </LinearLayout>
@@ -143,10 +145,11 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/tree" />
+                    android:src="@drawable/sns_tree" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/snsArticle3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="10dp"
@@ -208,7 +211,7 @@
                     android:layout_weight="1"
                     android:padding="10dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/flower" />
+                    android:src="@drawable/sns_sunflower" />
             </LinearLayout>
 
         </LinearLayout>

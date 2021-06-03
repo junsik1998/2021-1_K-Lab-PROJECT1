@@ -63,8 +63,7 @@ class MainActivity : AppCompatActivity(){
                         true
                     }
                     R.id.SNSMenuBtn -> {
-                        setFragment(SnsFragment())
-                        //Toast.makeText(this@MainActivity, "SNS", Toast.LENGTH_SHORT).show()
+                        setDataAtFragment(SnsFragment(), select!!)
                         true
                     }
                     else->{
