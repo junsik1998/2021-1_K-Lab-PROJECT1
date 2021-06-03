@@ -39,7 +39,7 @@
             android:background="@drawable/border_set"
             android:checked="true"
             android:padding="20dp"
-            android:text="Seoul Foreset Park (2KM)"
+            android:text="Seoul Forest Park (2KM)"
             android:textSize="15sp" />
 
         <RadioButton
