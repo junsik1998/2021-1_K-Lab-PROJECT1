@@ -15,13 +15,16 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        binding.loginBtn.setOnClickListener {
-            val intent = Intent(this,IntroActivity::class.java)
-            startActivity(intent)
-        }
-        binding.signupBtn.setOnClickListener {
-            val intent = Intent(this,SignUpActivity::class.java)
-            startActivity(intent)
+        binding.apply {
+            SignUpText.setOnClickListener {
+                val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
+                startActivity(intent)
+            }
+            SignInText.setOnClickListener {
+                val intent = Intent(this@LoginActivity, IntroActivity::class.java)
+                startActivity(intent)
+            }
+
         }
     }
 }
