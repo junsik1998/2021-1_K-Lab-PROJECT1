@@ -29,6 +29,7 @@ class RowAddActivity : AppCompatActivity() {
         binding.apply {
             addCancel.setOnClickListener {
                 editTextClear()
+                finish()
             }
 
             addRow.setOnClickListener {
@@ -40,6 +41,7 @@ class RowAddActivity : AppCompatActivity() {
                  val values = ActivityRowComponent(id,title,"",1,fullNum,"Randomshot",date,"",0)
                 rdb.child(id.toString()).setValue(values)
                 editTextClear()
+                finish()
             }
         }
     }
