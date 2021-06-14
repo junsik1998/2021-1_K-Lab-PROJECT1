@@ -4,23 +4,23 @@
 
     <item
         android:id="@+id/InfoMenuBtn"
-        android:icon="@drawable/common_google_signin_btn_icon_dark"
+        android:icon="@drawable/ic_outline_info_24"
         android:title="Info"
 
         app:showAsAction="always" />
     <item
         android:id="@+id/ActivityMenuBtn"
-        android:icon="@drawable/common_google_signin_btn_icon_dark"
+        android:icon="@drawable/ic_baseline_people_outline_24"
         android:title="Activity"
         app:showAsAction="always" />
     <item
         android:id="@+id/MyMenuBtn"
-        android:icon="@drawable/common_google_signin_btn_icon_dark_focused"
+        android:icon="@drawable/ic_outline_person_24"
         android:title="My"
         app:showAsAction="always" />
     <item
         android:id="@+id/SNSMenuBtn"
-        android:icon="@drawable/common_google_signin_btn_icon_dark"
+        android:icon="@drawable/ic_outline_image_24"
         android:title="SNS"
         app:showAsAction="always" />
 </menu>
