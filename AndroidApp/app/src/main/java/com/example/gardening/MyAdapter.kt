@@ -1,5 +1,9 @@
 package com.example.gardening
 
+import android.graphics.Color
+import android.text.Spannable
+import android.text.SpannableStringBuilder
+import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +12,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
+import java.util.*
 
 class MyAdapter(options: FirebaseRecyclerOptions<ActivityRowComponent>):
     FirebaseRecyclerAdapter<ActivityRowComponent, MyAdapter.ViewHolder>(options) {
@@ -68,7 +73,22 @@ class MyAdapter(options: FirebaseRecyclerOptions<ActivityRowComponent>):
                 participantNum += "○"
 
             }
-            holder.participantNum.text = participantNum
+            val content = setEachTextColor(participantNum, holder.currentNum)
+            holder.participantNum.setText(content)
         //holder.participantNum.text = activityRow.aCurrentParticipantNum.toString() + "/" + activityRow.aFullParticipantNum.toString()
+    }
+    private fun setEachTextColor(string:String, num:Int) : SpannableStringBuilder {
+        var rnd = Random()
+
+        val spannable = SpannableStringBuilder(string)
+        for(i in 0..num-1){
+            spannable.setSpan(
+                ForegroundColorSpan(Color.argb(255,rnd.nextInt(256),rnd.nextInt(256),rnd.nextInt(256))),
+                i,
+                i+1,
+                Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+        }
+        return spannable
     }
 }
