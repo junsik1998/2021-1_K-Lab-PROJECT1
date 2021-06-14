@@ -22,7 +22,6 @@ class RowAddActivity : AppCompatActivity() {
             addTitleEditText.text.clear()
             addFullEditText.text.clear()
             addDateEditText.text.clear()
-            addContentEditText.text.clear()
         }
     }
     private fun init() {
@@ -37,9 +36,8 @@ class RowAddActivity : AppCompatActivity() {
                 val title = addTitleEditText.text.toString()
                  val fullNum = addFullEditText.text.toString().toInt()
                 val date = addDateEditText.text.toString()
-                 val content = addContentEditText.text.toString()
                 val id = random.nextInt(999999)
-                 val values = ActivityRowComponent(id,title,content,1,fullNum,"Randomshot",date,"",0)
+                 val values = ActivityRowComponent(id,title,"",1,fullNum,"Randomshot",date,"",0)
                 rdb.child(id.toString()).setValue(values)
                 editTextClear()
             }

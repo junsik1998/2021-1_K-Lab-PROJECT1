@@ -59,6 +59,15 @@ class MyAdapter2(options: FirebaseRecyclerOptions<ActivityRowComponent>):
         holder.comment = activityRow.aComment
         holder.currentNum = activityRow.aCurrentParticipantNum
         holder.fullNum = activityRow.aFullParticipantNum
-        holder.participantNum.text = activityRow.aCurrentParticipantNum.toString() + "/" + activityRow.aFullParticipantNum.toString()
+        var participantNum = ""
+        for( i in  1..activityRow.aCurrentParticipantNum){
+            participantNum += "●"
+
+        }
+        for( i in  1..(activityRow.aFullParticipantNum-activityRow.aCurrentParticipantNum)){
+            participantNum += "○"
+
+        }
+        holder.participantNum.text = participantNum
     }
 }
